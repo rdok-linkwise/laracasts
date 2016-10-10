@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace app;
 
 use Exception;
 use Illuminate\Database\Eloquent\Collection;
@@ -24,11 +24,11 @@ class Team extends Model
     private function guardAgainstTooManyMembers($numberOfMembersToAdd)
     {
         if ($this->count() >= $this->size) {
-            throw new Exception("Team cannot hold any more members.");
+            throw new Exception('Team cannot hold any more members.');
         }
 
         if ($this->count() + $numberOfMembersToAdd > $this->size) {
-            throw new Exception("Team maximum size is exceeded.");
+            throw new Exception('Team maximum size is exceeded.');
         }
     }
 
@@ -44,6 +44,7 @@ class Team extends Model
 
     /**
      * @param $newMembers
+     *
      * @return int
      */
     private function extractNewUsersCount($newMembers)

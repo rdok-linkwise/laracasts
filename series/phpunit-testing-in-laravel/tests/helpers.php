@@ -1,11 +1,11 @@
 <?php
 /**
  * @author Rizart Dokollari <r.dokollari@gmail.com>
+ *
  * @since 5/29/16
  */
 use App\Post;
 use App\User;
-
 
 function createPost($attributes = [])
 {

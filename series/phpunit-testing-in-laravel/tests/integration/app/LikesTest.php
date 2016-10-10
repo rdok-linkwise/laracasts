@@ -21,16 +21,16 @@ class LikesTest extends TestCase
     public function a_user_can_like_a_post()
     {
         $this->dontSeeInDatabase('likes', [
-            'user_id'       => $this->user->id,
-            'likeable_id'   => $this->post->id,
+            'user_id' => $this->user->id,
+            'likeable_id' => $this->post->id,
             'likeable_type' => get_class($this->post),
         ]);
 
         $this->user->like($this->post);
 
         $this->seeInDatabase('likes', [
-            'user_id'       => $this->user->id,
-            'likeable_id'   => $this->post->id,
+            'user_id' => $this->user->id,
+            'likeable_id' => $this->post->id,
             'likeable_type' => get_class($this->post),
         ]);
     }
@@ -41,16 +41,16 @@ class LikesTest extends TestCase
         $this->user->like($this->post);
 
         $this->seeInDatabase('likes', [
-            'user_id'       => $this->user->id,
-            'likeable_id'   => $this->post->id,
+            'user_id' => $this->user->id,
+            'likeable_id' => $this->post->id,
             'likeable_type' => get_class($this->post),
         ]);
 
         $this->user->unlike($this->post);
 
         $this->dontSeeInDatabase('likes', [
-            'user_id'       => $this->user->id,
-            'likeable_id'   => $this->post->id,
+            'user_id' => $this->user->id,
+            'likeable_id' => $this->post->id,
             'likeable_type' => get_class($this->post),
         ]);
     }

@@ -1,11 +1,10 @@
 <?php
 /**
  * @author Rizart Dokollari <r.dokollari@gmail.com>
+ *
  * @since 5/16/16
  */
-
-namespace App;
-
+namespace app;
 
 class Product
 {

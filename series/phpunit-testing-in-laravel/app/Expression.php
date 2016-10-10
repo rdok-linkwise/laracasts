@@ -1,11 +1,10 @@
 <?php
 /**
  * @author Rizart Dokollari <r.dokollari@gmail.com>
+ *
  * @since 5/29/16
  */
-
-namespace App;
-
+namespace app;
 
 class Expression
 {
@@ -13,7 +12,7 @@ class Expression
 
     public static function make()
     {
-        return new static;
+        return new static();
     }
 
     public function anything()
@@ -71,6 +70,6 @@ class Expression
 
     public function test($value)
     {
-        return (bool)preg_match((string)$this, $value);
+        return (bool) preg_match((string) $this, $value);
     }
 }

@@ -10,6 +10,7 @@ class TeamTest extends TestCase
 
     /**
      * @test
+     *
      * @param $teamName
      * @dataProvider teamNamesProvider
      */
@@ -22,7 +23,7 @@ class TeamTest extends TestCase
 
     public function teamNamesProvider()
     {
-        return [['TeamName1',], ['TeamName2']];
+        return [['TeamName1'], ['TeamName2']];
     }
 
     /** @test */
@@ -51,7 +52,7 @@ class TeamTest extends TestCase
         $team = factory(Team::class)->create(['size' => 2]);
         $users = factory(User::class, 2)->create();
         $team->add($users);
-        $this->setExpectedException(Exception::class, "Team cannot hold any more members.");
+        $this->setExpectedException(Exception::class, 'Team cannot hold any more members.');
         $users = factory(User::class, 2)->create();
 
         $team->add($users);
@@ -61,7 +62,7 @@ class TeamTest extends TestCase
     public function enforce_maximum_size_when_members_to_add_are_greater_than_max()
     {
         $team = factory(Team::class)->create(['size' => 2]);
-        $this->setExpectedException(Exception::class, "Team maximum size is exceeded.");
+        $this->setExpectedException(Exception::class, 'Team maximum size is exceeded.');
         $users = factory(User::class, 3)->create();
 
         $team->add($users);

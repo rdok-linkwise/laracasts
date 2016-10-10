@@ -1,11 +1,10 @@
 <?php
 /**
  * @author Rizart Dokollari <r.dokollari@gmail.com>
+ *
  * @since 5/17/16
  */
-
-namespace App;
-
+namespace app;
 
 class Order
 {
@@ -16,6 +15,7 @@ class Order
 
     /**
      * Order constructor.
+     *
      * @param array $products
      */
     public function __construct(array $products = [])
@@ -38,7 +38,6 @@ class Order
         $total = 0;
 
         foreach ($this->products as $product) {
-
             $total += $product->price();
         }
 

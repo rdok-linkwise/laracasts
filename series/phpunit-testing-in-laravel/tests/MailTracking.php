@@ -1,9 +1,9 @@
 <?php
 /**
  * @author Rizart Dokollari <r.dokollari@gmail.com>
+ *
  * @since 6/6/16
  */
-
 namespace tests;
 
 use Mail;
