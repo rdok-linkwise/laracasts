@@ -1,0 +1,6 @@
+suites:
+    src_suite:
+        namespace: App
+        spec_prefix: tests\unit
+        src_path: app
+        psr4_prefix: App
