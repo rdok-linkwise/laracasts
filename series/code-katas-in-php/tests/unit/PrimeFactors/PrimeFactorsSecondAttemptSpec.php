@@ -1,9 +1,8 @@
 <?php
 
-namespace tests\unit\App;
+namespace tests\unit\App\PrimeFactors;
 
-use App\PrimeFactorsSecondAttempt;
-use App\PrimeFactorsSendAttempt;
+use App\PrimeFactors\PrimeFactorsSecondAttempt;
 use PhpSpec\ObjectBehavior;
 
 class PrimeFactorsSecondAttemptSpec extends ObjectBehavior

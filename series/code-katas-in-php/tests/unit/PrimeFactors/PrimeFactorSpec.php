@@ -1,8 +1,8 @@
 <?php
 
-namespace tests\unit\App;
+namespace tests\unit\App\PrimeFactors;
 
-use App\PrimeFactor;
+use App\PrimeFactors\PrimeFactor;
 use PhpSpec\ObjectBehavior;
 
 class PrimeFactorSpec extends ObjectBehavior
