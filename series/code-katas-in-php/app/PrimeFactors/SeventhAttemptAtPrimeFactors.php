@@ -9,7 +9,7 @@ class SeventhAttemptAtPrimeFactors
         $output = [];
 
         for ($tester = 2; $tester < $number; $tester++) {
-            for ($number /= $tester; $number % $tester == 0;) {
+            for (; $number % $tester == 0; $number /= $tester) {
                 $output[] = $tester;
             }
         }
