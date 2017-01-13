@@ -2,7 +2,7 @@
 
 namespace tests\unit\App\BinaryGap;
 
-use App\BinaryGap\FirstAttemptAtBinaryGap;
+use App\BinaryGap\ThirdAttemptAtBinaryGap;
 use PhpSpec\ObjectBehavior;
 
 /**
@@ -31,29 +31,37 @@ use PhpSpec\ObjectBehavior;
  * Complexity:
  * expected worst-case time complexity is O(log(N));
  * expected worst-case space complexity is O(1).
- *
- * Class FirstAttemptAtBinaryGapSpec
- * @package tests\unit\App\BinaryGap
  */
-class FirstAttemptAtBinaryGapSpec extends ObjectBehavior
+class ThirdAttemptAtBinaryGapSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType(FirstAttemptAtBinaryGap::class);
+        $this->shouldHaveType(ThirdAttemptAtBinaryGap::class);
     }
 
-    function it_returns_0_if_number_give_has_no_binary_gap()
+    function it_generates_zero_for_zero()
     {
-        $this->solution(0)->shouldReturn(0);
+        $this->generate(0)->shouldReturn(0);
     }
 
-    function it_returns_0_if_for_binary_gap_of_32()
+    function it_generates_1_for_5()
     {
-        $this->solution(32)->shouldReturn(0);
+        $this->generate(5)->shouldReturn(1);
     }
 
-    function it_returns_0_if_for_binary_gap_of_127()
+    function it_generates_0_for_6()
     {
-        $this->solution(127)->shouldReturn(0);
+        $this->generate(6)->shouldReturn(0);
+    }
+
+
+    function it_generates_2_for_9()
+    {
+        $this->generate(9)->shouldReturn(2);
+    }
+
+    function it_generates_1_for_21()
+    {
+        $this->generate(21)->shouldReturn(1);
     }
 }
