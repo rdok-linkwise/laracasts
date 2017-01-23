@@ -9,6 +9,7 @@ use PhpSpec\ObjectBehavior;
 class FirstAttemptAtTennisSpec extends ObjectBehavior
 {
     const JOHN_DOE = 'John Doe';
+
     const JANE = 'Jane';
     /**
      * @var Player
