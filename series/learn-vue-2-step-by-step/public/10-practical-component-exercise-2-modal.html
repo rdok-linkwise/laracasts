@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css"/>
+    <style type="text/css">
+        body {
+            padding-top: 45px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="root" class="container">
+    <a class="button is-primary is-large modal-button" @click="showLoginModal = true">Launch example modal</a>
+
+    <acme-modal v-show="showLoginModal" @close="showLoginModal = false">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus nibh, dignissim vel efficitur
+            ut, laoreet faucibus justo. Proin turpis ligula, rhoncus eget eros sit amet, vehicula suscipit odio.
+            Nulla facilisi. Quisque magna felis, scelerisque posuere auctor in, sodales quis quam.
+        </p>
+    </acme-modal>
+</div>
+
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+<script src="js/10-practical-component-exercise-2-modal-main.js"></script>
+
+</body>
+</html>
