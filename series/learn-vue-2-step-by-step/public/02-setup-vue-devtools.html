@@ -7,9 +7,10 @@
 <body>
 
 <div id="root">
+
     <input type="text" id="input" v-model="message"/>
 
-    <p> The value of the input is: {{message}}</p>
+    <p>The of the input is: {{ message }}.</p>
 </div>
 
 <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
@@ -19,8 +20,9 @@
         el: '#root',
         data: {
             message: 'Hello World'
-        }
+        },
     });
+
 </script>
 </body>
 </html>

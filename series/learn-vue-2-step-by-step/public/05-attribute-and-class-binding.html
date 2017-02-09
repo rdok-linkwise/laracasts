@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .color-red {
+            color: red;
+        }
+
+        .color-blue {
+            color: blue;
+        }
+
+        .is-loading {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+
+<div id="root">
+    <button :title="title">Hover</button>
+
+    <h1 :class="className">Hello</h1>
+
+    <button :class="{ 'is-loading': isLoading }" @click="toggleClass">Toggle</button>
+    <button @click="toggleDisable">Toggle</button>
+
+    <button :disabled="disabledState" @click="toggleDisable">{{ disabledText }}</button>
+</div>
+
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+
+<script>
+    new Vue({
+        el: '#root',
+        data: {
+            title: 'Now the title is being set through JavaScript.',
+            className: 'color-red',
+            isLoading: false,
+            disabledText: 'Enabled',
+            disabledState: false,
+        },
+
+        methods: {
+            toggleClass() {
+                this.isLoading = !this.isLoading;
+            },
+            toggleDisable() {
+                if (this.disabledState == false) {
+                    this.disabledState = true;
+                    this.disabledText = 'Disabled';
+                    return;
+                }
+
+                this.disabledState = false;
+                this.disabledText = 'Enabled';
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
