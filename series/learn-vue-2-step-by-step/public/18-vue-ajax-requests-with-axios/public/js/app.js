@@ -7,7 +7,5 @@ new Vue({
 
     mounted() {
         axios.get('/skills').then(response => this.skills = response.data);
-
-        this.$http.post('/skills', {});
     }
 });
