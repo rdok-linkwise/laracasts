@@ -34,7 +34,7 @@ class Errors {
 
 class Form {
     constructor(data) {
-        this.originalData = data;
+        this.fields = data;
 
         for (let field in data) {
             this[field] = data[field];
@@ -44,7 +44,7 @@ class Form {
     }
 
     reset() {
-        for (let field in this.originalData) {
+        for (let field in this.fields) {
             this[field] = null;
         }
     }
@@ -52,7 +52,7 @@ class Form {
     data() {
         let data = Object.assign({}, this);
 
-        delete data.originalData;
+        delete data.fields;
         delete data.errors;
 
         return data;

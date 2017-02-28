@@ -1,7 +1,7 @@
 <h1>Projects</h1>
 <ul>
-    @foreach($projects as $project)
-        <li>{!! $project->name !!}</li>
-    @endforeach
+    <li v-for="project in projects">
+        @{{ project.name }}
+    </li>
 </ul>
 <hr>
